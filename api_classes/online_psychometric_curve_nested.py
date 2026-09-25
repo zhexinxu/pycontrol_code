@@ -1,4 +1,3 @@
-import random
 from source.gui.api import Api
 import matplotlib.pyplot as plt
 import numpy as np

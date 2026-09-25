@@ -16,8 +16,8 @@ pc.v.low_side = "right"
 # Hygrostat params
 pc.v.RH_levels = [24, 30, 36, 42, 47, 53, 58, 64, 70, 76]
 pc.v.RH_repetitions = [1, 2, 3, 3, 2, 2, 3, 3, 2, 1] # balance easy and near-threshold levels
-# pc.v.RH_levels = [24, 30, 40, 60, 70, 76] # easy entry for new cohort
-# pc.v.RH_repetitions = [1, 5, 1, 1, 5, 1]
+# pc.v.RH_levels = [30, 40, 45, 55, 60, 70] # easy entry for new cohort
+# pc.v.RH_repetitions = [4, 1, 1, 1, 1, 4]
 pc.v.RH_reference = 50  # reward reference, stick to 50%
 
 # Choosing high/low sides based on last digit of subject ID
@@ -32,7 +32,7 @@ def get_sides_from_subject_id():
 
 drawer = pc.drawer(repetitions=pc.v.RH_repetitions, humidity=pc.v.RH_levels)
 
-pc.v.flow_rate = 1000 # mL/min
+pc.v.flow_rate = 200 # mL/min
 pc.v.current_RH = pc.choice(drawer.original)['humidity']  # start at random RH
 pc.v.next_RH = pc.v.current_RH
 

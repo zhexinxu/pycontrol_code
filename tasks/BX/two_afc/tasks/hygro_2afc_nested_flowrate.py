@@ -8,7 +8,7 @@ events = ["center_poke", "right_poke", "left_poke", "center_poke_out", "right_po
         "close_final_valve", "close_final_valve_done", "center_poke_held", "set_RH_for_trial", "teensy_sync"]
 initial_state = "inter_trial_interval" # starts with ITI so we have time for hygrostat to get ready
 
-pc.v.api_class = 'online_psychometric_curve_nested'
+# pc.v.api_class = 'online_psychometric_curve_nested'
 pc.v.subject_id = '' # place holder, will be set from setup_task()
 pc.v.high_side = "left"
 pc.v.low_side = "right"
